@@ -2,6 +2,7 @@ package mz.isctem.agrogest.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /** Colheita de um cultivo: data, quantidade em kg e preco por kg. */
 public class Colheita implements Serializable {
@@ -40,4 +41,9 @@ public class Colheita implements Serializable {
 
     public double getPrecoKg() { return precoKg; }
     public void setPrecoKg(double precoKg) { this.precoKg = precoKg; }
+
+    /** Data da colheita em texto dd/MM/yyyy para as JSP. */
+    public String getDataTexto() {
+        return (data == null) ? "—" : data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 }

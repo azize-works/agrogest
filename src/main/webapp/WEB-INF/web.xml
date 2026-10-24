@@ -7,6 +7,12 @@
 
     <display-name>AgroGest</display-name>
 
+    <!-- Formatacao de numeros/valores nas JSP (fmt): sempre em portugues de Mocambique (ex.: 320,00) -->
+    <context-param>
+        <param-name>jakarta.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>pt_MZ</param-value>
+    </context-param>
+
     <!-- Pagina inicial -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
@@ -16,4 +22,10 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+
+    <!-- Erro 403 (acesso negado): mostra a nossa pagina em vez da pagina feia do Tomcat -->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/comum/erro403.jsp</location>
+    </error-page>
 </web-app>

@@ -2,6 +2,7 @@ package mz.isctem.agrogest.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /** Cultivo registado dentro de uma campanha (ex.: Feijao nhemba, 8 ha). */
 public class Cultivo implements Serializable {
@@ -41,4 +42,9 @@ public class Cultivo implements Serializable {
 
     public LocalDate getDataPlantio() { return dataPlantio; }
     public void setDataPlantio(LocalDate dataPlantio) { this.dataPlantio = dataPlantio; }
+
+    /** Data de plantio em texto dd/MM/yyyy para as JSP. */
+    public String getDataPlantioTexto() {
+        return (dataPlantio == null) ? "—" : dataPlantio.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 }

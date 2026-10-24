@@ -2,6 +2,7 @@ package mz.isctem.agrogest.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,4 +59,9 @@ public class Venda implements Serializable {
 
     public List<VendaItem> getItens() { return itens; }
     public void setItens(List<VendaItem> itens) { this.itens = itens; }
+
+    /** Data e hora da venda em texto dd/MM/yyyy HH:mm para as JSP. */
+    public String getDataTexto() {
+        return (data == null) ? "—" : data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+    }
 }

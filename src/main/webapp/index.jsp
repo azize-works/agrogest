@@ -1,5 +1,6 @@
-<%-- index.jsp: pagina inicial do AgroGest (provisoria, confirma que a aplicacao esta a correr) --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- index.jsp: pagina inicial publica do AgroGest. --%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -9,14 +10,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/estilo.css">
 </head>
 <body>
-    <header class="topo">
-        <span class="marca">AgroGest</span>
-        <nav>
-            <a href="#">Catálogo</a>
-            <a href="#">Entrar</a>
-            <a href="#">Registar</a>
-        </nav>
-    </header>
+    <jsp:include page="/WEB-INF/views/comum/cabecalho.jsp" />
 
     <section class="heroi">
         <h1>Gestão Agrícola, simples e organizada</h1>

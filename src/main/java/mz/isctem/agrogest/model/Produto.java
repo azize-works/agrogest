@@ -2,6 +2,7 @@ package mz.isctem.agrogest.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /** Produto do catalogo, com stock. Liga-se ao fornecedor pelo seu id. */
 public class Produto implements Serializable {
@@ -62,4 +63,9 @@ public class Produto implements Serializable {
 
     public LocalDate getValidade() { return validade; }
     public void setValidade(LocalDate validade) { this.validade = validade; }
+
+    /** Validade em texto dd/MM/yyyy para as JSP; devolve "—" se nao tiver validade. */
+    public String getValidadeTexto() {
+        return (validade == null) ? "—" : validade.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 }
