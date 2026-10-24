@@ -1,0 +1,15 @@
+# Resultado da compilacao do Maven
+target/
+
+# Dados gravados pela aplicacao (ficheiros .ser)
+dados/
+*.ser
+
+# Ficheiros de IDE e sistema
+.idea/
+.settings/
+.classpath
+.project
+*.class
+.DS_Store
+Thumbs.db
