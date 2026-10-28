@@ -39,12 +39,26 @@ src/main/webapp/
 scripts/           iniciar.bat e parar.bat
 ```
 
-## Estado do projecto
-- [x] Esqueleto Maven e estrutura de pastas
-- [x] Classes do `model`
-- [x] DataStore, persistência e listener
-- [ ] Autenticação e filtro
-- [ ] Módulo Administrador
-- [ ] Módulo Cliente
-- [ ] Relatórios
-- [ ] Deploy com systemd e manual de utilização
+## Rotas
+| Rota | Perfil | Descrição |
+|---|---|---|
+| `/` | público | Página inicial |
+| `/login`, `/logout`, `/registo` | público | Entrar, sair e auto-registo de clientes |
+| `/catalogo` | cliente | Catálogo de produtos com filtro por categoria |
+| `/carrinho` | cliente | Carrinho (adicionar, actualizar, remover, esvaziar) |
+| `/compra` | cliente | Resumo e confirmação da compra |
+| `/factura?id=` | cliente (as suas) / admin (todas) | Factura com IVA 16% |
+| `/minhas-compras` | cliente | Histórico de compras |
+| `/admin` | admin | Painel com os totais |
+| `/admin/fornecedores` | admin | Fornecedores |
+| `/admin/produtos` | admin | Produtos e reposição de stock |
+| `/admin/armazem` | admin | Produtos em stock |
+| `/admin/campanhas` | admin | Campanhas agrícolas |
+| `/admin/cultivos` | admin | Cultivos |
+| `/admin/colheitas` | admin | Colheitas |
+| `/admin/clientes` | admin | Clientes (activar/desactivar) |
+| `/admin/compras` | admin | Compras detalhadas |
+| `/admin/relatorios` | admin | Relatórios de clientes |
+| `/admin/persistencia` | admin | Gravar agora / eliminar o ficheiro de dados |
+
+

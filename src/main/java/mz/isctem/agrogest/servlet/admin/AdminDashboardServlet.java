@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import mz.isctem.agrogest.repo.DataStore;
+import mz.isctem.agrogest.service.ClienteService;
 
 /**
  * Painel do administrador (/admin). Mostra os totais do sistema.
@@ -17,12 +18,14 @@ import mz.isctem.agrogest.repo.DataStore;
 @WebServlet("/admin")
 public class AdminDashboardServlet extends HttpServlet {
 
+    /** Calcula os totais (fornecedores, produtos, clientes, campanhas e vendas) e abre o painel. */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         DataStore dados = DataStore.getInstance();
         req.setAttribute("totalFornecedores", dados.getFornecedores().size());
         req.setAttribute("totalProdutos", dados.getProdutos().size());
+        req.setAttribute("totalClientes", ClienteService.contar());
         req.setAttribute("totalCampanhas", dados.getCampanhas().size());
         req.setAttribute("totalVendas", dados.getVendas().size());
         req.getRequestDispatcher("/WEB-INF/views/admin/dashboard.jsp").forward(req, resp);

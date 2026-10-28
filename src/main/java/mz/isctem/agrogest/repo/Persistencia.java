@@ -7,6 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Grava e le o DataStore num ficheiro (serializacao Java).
@@ -52,5 +55,40 @@ public class Persistencia {
     /** Apaga o ficheiro de dados (usado na opcao "eliminar dados" do admin). */
     public static synchronized void eliminar() throws IOException {
         Files.deleteIfExists(ficheiro());
+    }
+
+    // --- Informacao sobre o ficheiro (para a pagina de persistencia do admin) ---
+
+    /** Indica se o ficheiro de dados ja existe no disco. */
+    public static boolean existeFicheiro() {
+        return Files.exists(ficheiro());
+    }
+
+    /** Caminho completo do ficheiro de dados. */
+    public static String getCaminho() {
+        return ficheiro().toAbsolutePath().toString();
+    }
+
+    /** Tamanho do ficheiro em bytes (0 se nao existir ou nao for possivel ler). */
+    public static long getTamanho() {
+        try {
+            return existeFicheiro() ? Files.size(ficheiro()) : 0;
+        } catch (IOException e) {
+            return 0;
+        }
+    }
+
+    /** Data/hora da ultima gravacao no formato dd/MM/yyyy HH:mm:ss, ou "—" se nao existir. */
+    public static String getUltimaModificacao() {
+        try {
+            if (!existeFicheiro()) {
+                return "—";
+            }
+            LocalDateTime data = LocalDateTime.ofInstant(
+                    Files.getLastModifiedTime(ficheiro()).toInstant(), ZoneId.systemDefault());
+            return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+        } catch (IOException e) {
+            return "—";
+        }
     }
 }

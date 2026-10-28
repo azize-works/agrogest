@@ -3,7 +3,7 @@
 Trabalho prático de **Sistemas Distribuídos** (ISCTEM, Engenharia Informática).
 Aplicação web em **Java (Servlets + JSP + JSTL)** publicada no **Apache Tomcat 10.1**, com os dados em memória e gravação em ficheiro (serialização Java). Sem base de dados.
 
-**Autores:** Cleyton Azize e Isma *(completar com nomes completos e códigos de estudante)*
+**Autores:** Cleyton Azize Azize (20240534) ; Isma Cudbudin (20220133)
 
 ---
 
@@ -82,13 +82,4 @@ src/main/webapp/
 scripts/           iniciar.bat e parar.bat
 ```
 
-## Estado do projecto
-- [x] Esqueleto Maven e estrutura de pastas
-- [x] Classes do `model`
-- [x] DataStore, persistência e listener
-- [x] Autenticação e filtro de acesso
-- [x] Administrador: fornecedores, produtos e armazém
-- [ ] Administrador: campanhas, cultivos e colheitas
-- [ ] Administrador: clientes, compras detalhadas, relatórios e gravação manual
-- [ ] Módulo Cliente: catálogo, carrinho, compra, factura e histórico
-- [ ] Deploy com systemd, release no GitHub e manual de utilização
+

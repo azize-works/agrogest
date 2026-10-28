@@ -332,3 +332,49 @@ tr:hover td { background: #fafcf9; }
     .conteudo { max-width: 100%; margin: 0; padding: 0; }
     .cartao { box-shadow: none; padding: 0; }
 }
+
+/* ---------- Admin: compras detalhadas ---------- */
+.bloco-compra-topo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--verde-claro);
+}
+.factura-numero { font-size: 1.1rem; color: var(--verde-escuro); margin-right: 10px; }
+.bloco-compra-cliente { margin: 0 0 12px; font-size: 0.95rem; }
+
+/* ---------- Admin: abas (relatorios e ordenacao das compras) ---------- */
+.abas { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.abas span { color: #78909c; margin-right: 4px; }
+.abas a {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--branco);
+    border: 1px solid #cfd8dc;
+    color: var(--verde-escuro);
+    font-weight: 600;
+}
+.abas a:hover { background: var(--verde-claro); text-decoration: none; }
+.abas a.activa { background: var(--verde); border-color: var(--verde); color: var(--branco); }
+.abas-grandes { margin-bottom: 18px; }
+
+/* ---------- Admin: cartao de persistencia ---------- */
+.cartao-persistencia { max-width: 760px; }
+.lista-estado { display: grid; grid-template-columns: 150px 1fr; gap: 8px 16px; margin: 0 0 8px; }
+.lista-estado dt { font-weight: 600; color: var(--verde-escuro); }
+.lista-estado dd { margin: 0; word-break: break-all; }
+.nota {
+    margin: 18px 0 0;
+    padding: 10px 14px;
+    border-left: 4px solid var(--verde);
+    background: var(--verde-claro);
+    border-radius: 6px;
+    font-size: 0.92rem;
+}
+@media (max-width: 600px) {
+    .lista-estado { grid-template-columns: 1fr; }
+}

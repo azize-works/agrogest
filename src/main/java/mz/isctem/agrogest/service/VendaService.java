@@ -89,6 +89,37 @@ public class VendaService {
         return resultado;
     }
 
+    /**
+     * Devolve uma copia de todas as vendas ordenada por "data" (omissao, mais recente primeiro),
+     * "valor" (total, decrescente) ou "cliente" (nome do cliente).
+     */
+    public static List<Venda> listarTodas(String ordem) {
+        // 1. Copiar a lista de vendas em seguranca
+        List<Venda> lista = DataStore.getInstance().getVendas();
+        List<Venda> copia;
+        synchronized (lista) {
+            copia = new ArrayList<>(lista);
+        }
+
+        // 2. Ordenar conforme o parametro pedido
+        if ("valor".equals(ordem)) {
+            copia.sort(Comparator.comparingDouble(Venda::getTotal).reversed());
+        } else if ("cliente".equals(ordem)) {
+            copia.sort(Comparator.comparing((Venda v) -> nomeCliente(v.getClienteId()), String.CASE_INSENSITIVE_ORDER)
+                    .thenComparing(Comparator.comparing(Venda::getData).reversed()));
+        } else {
+            copia.sort(Comparator.comparing(Venda::getData).reversed()
+                    .thenComparing(Comparator.comparingInt(Venda::getId).reversed()));
+        }
+        return copia;
+    }
+
+    /** Nome do cliente com o id dado, ou texto vazio se ja nao existir (usado para ordenar). */
+    private static String nomeCliente(int clienteId) {
+        Utilizador u = procurarCliente(clienteId);
+        return (u == null) ? "" : u.getNome();
+    }
+
     /** Procura uma venda pelo id. Devolve null se nao existir. */
     public static Venda procurarPorId(int id) {
         List<Venda> lista = DataStore.getInstance().getVendas();

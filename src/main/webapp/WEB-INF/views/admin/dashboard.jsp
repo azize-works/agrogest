@@ -17,12 +17,13 @@
 
     <main class="conteudo">
         <h2>Painel do administrador</h2>
-        <%-- Cada cartao leva a respectiva pagina (vendas ainda nao tem pagina) --%>
+        <%-- Cada cartao e um link para a respectiva pagina --%>
         <div class="grelha">
             <a class="cartao estatistica cartao-link" href="${pageContext.request.contextPath}/admin/fornecedores"><span class="numero">${totalFornecedores}</span><span>Fornecedores</span></a>
             <a class="cartao estatistica cartao-link" href="${pageContext.request.contextPath}/admin/produtos"><span class="numero">${totalProdutos}</span><span>Produtos</span></a>
+            <a class="cartao estatistica cartao-link" href="${pageContext.request.contextPath}/admin/clientes"><span class="numero">${totalClientes}</span><span>Clientes</span></a>
             <a class="cartao estatistica cartao-link" href="${pageContext.request.contextPath}/admin/campanhas"><span class="numero">${totalCampanhas}</span><span>Campanhas</span></a>
-            <div class="cartao estatistica"><span class="numero">${totalVendas}</span><span>Vendas</span></div>
+            <a class="cartao estatistica cartao-link" href="${pageContext.request.contextPath}/admin/compras"><span class="numero">${totalVendas}</span><span>Vendas</span></a>
         </div>
     </main>
 </body>

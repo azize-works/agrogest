@@ -10,5 +10,9 @@
     <a href="${ctx}/admin/campanhas" class="${param.activo == 'campanhas' ? 'activo' : ''}">Campanhas</a>
     <a href="${ctx}/admin/cultivos" class="${param.activo == 'cultivos' ? 'activo' : ''}">Cultivos</a>
     <a href="${ctx}/admin/colheitas" class="${param.activo == 'colheitas' ? 'activo' : ''}">Colheitas</a>
+    <a href="${ctx}/admin/clientes" class="${param.activo == 'clientes' ? 'activo' : ''}">Clientes</a>
+    <a href="${ctx}/admin/compras" class="${param.activo == 'compras' ? 'activo' : ''}">Compras</a>
+    <a href="${ctx}/admin/relatorios" class="${param.activo == 'relatorios' ? 'activo' : ''}">Relatórios</a>
+    <a href="${ctx}/admin/persistencia" class="${param.activo == 'persistencia' ? 'activo' : ''}">Persistência</a>
 </nav>
 
