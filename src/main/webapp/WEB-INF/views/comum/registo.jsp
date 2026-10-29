@@ -14,8 +14,13 @@
 
     <main class="auth-pagina">
         <section class="cartao auth-cartao">
-            <h2>Criar conta</h2>
-            <p class="auth-sub">Registe-se para comprar no AgroGest.</p>
+            <div class="auth-cabecalho">
+                <span class="auth-icone" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                </span>
+                <h2>Criar conta</h2>
+                <p class="auth-sub">Registe-se para comprar no AgroGest.</p>
+            </div>
 
             <c:if test="${not empty erro}">
                 <p class="alerta alerta-erro"><c:out value="${erro}" /></p>

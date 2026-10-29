@@ -14,8 +14,13 @@
 
     <main class="auth-pagina">
         <section class="cartao auth-cartao">
-            <h2>Entrar</h2>
-            <p class="auth-sub">Aceda à sua conta AgroGest.</p>
+            <div class="auth-cabecalho">
+                <span class="auth-icone" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                </span>
+                <h2>Entrar</h2>
+                <p class="auth-sub">Aceda à sua conta AgroGest.</p>
+            </div>
 
             <%-- Mensagens: erro de login ou conta criada com sucesso --%>
             <c:if test="${not empty erro}">

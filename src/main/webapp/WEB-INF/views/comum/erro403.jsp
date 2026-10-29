@@ -14,8 +14,13 @@
 
     <main class="auth-pagina">
         <section class="cartao auth-cartao">
-            <h2>Acesso negado (403)</h2>
-            <p>Não tem permissão para aceder a esta página.</p>
+            <div class="auth-cabecalho">
+                <span class="auth-icone auth-icone-erro" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <h2>Acesso negado (403)</h2>
+                <p class="auth-sub">Não tem permissão para aceder a esta página.</p>
+            </div>
             <a class="btn btn-bloco" href="${pageContext.request.contextPath}/">Voltar ao início</a>
         </section>
     </main>
