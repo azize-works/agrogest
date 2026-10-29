@@ -1,6 +1,7 @@
 <%-- index.jsp: pagina inicial publica do AgroGest. --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -12,19 +13,12 @@
 <body>
     <jsp:include page="/WEB-INF/views/comum/cabecalho.jsp" />
 
-    <%-- Secção principal de destaque com ilustração SVG e atalhos rápidos --%>
+    <%-- Secção principal de destaque com o logótipo AgroGest e atalhos rápidos --%>
     <section class="heroi">
         <div class="heroi-conteudo">
-            <span class="heroi-ilustracao" aria-hidden="true">
-                <svg viewBox="0 0 120 72" width="110" height="66" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="88" cy="22" r="10" fill="rgba(255,213,79,0.35)" stroke="#ffd54f" />
-                    <path d="M8 62c22-16 48-18 76-6 12 5 22 6 28 6" />
-                    <path d="M22 62c20-10 46-12 82-2" opacity="0.7" />
-                    <path d="M46 54V24" />
-                    <path d="M46 38c-10-2-14-10-12-18 8 0 14 6 12 18z" fill="rgba(255,255,255,0.22)" />
-                    <path d="M46 32c10-2 14-10 12-18-8 0-14 6-12 18z" fill="rgba(255,255,255,0.22)" />
-                </svg>
-            </span>
+            <div class="heroi-logo-bloco">
+                <img class="logo-img logo-heroi" src="${pageContext.request.contextPath}/assets/img/logo-agrogest.svg" width="240" height="63" alt="AgroGest">
+            </div>
             <h1>Gestão Agrícola, simples e organizada</h1>
             <p>Fornecedores, cultivos, colheitas e vendas num só lugar.</p>
             <div class="heroi-accoes">

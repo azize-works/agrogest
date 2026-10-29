@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" width="260" height="68" role="img" aria-label="AgroGest">
+    <!-- Logotipo completo AgroGest: placa clara com borda dourada/verde, simbolo agricola e tipografia forte -->
+    <defs>
+        <linearGradient id="escudoVerde" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#184d27" />
+            <stop offset="100%" stop-color="#2b7a3d" />
+        </linearGradient>
+    </defs>
+    <!-- Base em pilula suave para garantir contraste perfeito tanto no cabecalho escuro como nos cartoes claros -->
+    <rect x="2" y="4" width="256" height="60" rx="18" fill="#ffffff" stroke="#d8e2dc" stroke-width="2" />
+    <rect x="5" y="7" width="250" height="54" rx="15" fill="#f7f6f0" opacity="0.55" />
+
+    <!-- Simbolo agricola (escudo circular com sol, colinas e espiga) -->
+    <g transform="translate(8, 6)">
+        <circle cx="28" cy="28" r="25" fill="url(#escudoVerde)" stroke="#d99b26" stroke-width="2.5" />
+        <circle cx="28" cy="21" r="8.5" fill="#ffd54f" opacity="0.92" />
+        <path d="M7 38 C16 31, 26 32, 38 39 C43 41, 46 41, 49 38 L46 45 C39 50, 33 52, 28 52 C21 52, 14 49, 9 43 Z" fill="#184d27" />
+        <path d="M9 41 C19 35, 33 35, 47 41 C43 48, 35 51, 28 51 C20 51, 13 47, 9 41 Z" fill="#388e3c" />
+        <path d="M28 45 V16" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" />
+        <path d="M28 36 C20 35, 17 30, 19 24 C24 25, 27 29, 28 36 Z" fill="#e7f4ea" />
+        <path d="M28 36 C36 35, 39 30, 37 24 C32 25, 29 29, 28 36 Z" fill="#e7f4ea" />
+        <ellipse cx="24.5" cy="21" rx="2.7" ry="4.2" transform="rotate(-28 24.5 21)" fill="#ffd54f" />
+        <ellipse cx="31.5" cy="21" rx="2.7" ry="4.2" transform="rotate(28 31.5 21)" fill="#ffd54f" />
+        <ellipse cx="25" cy="15.5" rx="2.4" ry="3.8" transform="rotate(-24 25 15.5)" fill="#d99b26" />
+        <ellipse cx="31" cy="15.5" rx="2.4" ry="3.8" transform="rotate(24 31 15.5)" fill="#d99b26" />
+        <ellipse cx="28" cy="11.5" rx="2.2" ry="3.5" fill="#ffd54f" />
+    </g>
+
+    <!-- Nome AgroGest com tipografia forte e subtitulo institucional -->
+    <text x="72" y="39" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="29" font-weight="800" letter-spacing="-0.6">
+        <tspan fill="#184d27">Agro</tspan><tspan fill="#2b7a3d">Gest</tspan>
+    </text>
+    <!-- Linha decorativa trigo e subtitulo curto -->
+    <rect x="73" y="45" width="44" height="3" rx="1.5" fill="#d99b26" />
+    <text x="123" y="49" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#5a6d62" letter-spacing="1.2">GESTÃO AGRÍCOLA</text>
+</svg>
+

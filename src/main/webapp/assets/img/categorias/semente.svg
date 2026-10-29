@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" role="img" aria-label="Semente">
+    <!-- Icone de Semente: grao dourado na terra e rebento verde a nascer -->
+    <path d="M6 26 C11 24, 21 24, 26 26" stroke="#b87f14" stroke-width="2.2" stroke-linecap="round" />
+    <ellipse cx="16" cy="23" rx="4.5" ry="3" fill="#d99b26" stroke="#184d27" stroke-width="1.8" />
+    <path d="M16 21 V9" stroke="#184d27" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M16 15 C10 15, 7 11, 8 6 C13 6, 16 10, 16 15 Z" fill="#2b7a3d" stroke="#184d27" stroke-width="1.8" stroke-linejoin="round" />
+    <path d="M16 12 C22 12, 25 8, 24 4 C19 4, 16 7, 16 12 Z" fill="#e7f4ea" stroke="#184d27" stroke-width="1.8" stroke-linejoin="round" />
+</svg>
+

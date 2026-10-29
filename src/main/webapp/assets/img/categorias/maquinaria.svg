@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" role="img" aria-label="Maquinaria">
+    <!-- Icone de Maquinaria: trator agricola com cabine verde e jantes douradas -->
+    <path d="M7 18 V10 H16 L19 15 H26 V21 H7 Z" fill="#2b7a3d" stroke="#184d27" stroke-width="2" stroke-linejoin="round" />
+    <rect x="9.5" y="11.5" width="5.5" height="4" rx="0.8" fill="#e7f4ea" />
+    <path d="M23 15 V11 C23 10, 24 9.5, 25 9.5" stroke="#184d27" stroke-width="2" stroke-linecap="round" />
+    <!-- Roda traseira grande e roda dianteira -->
+    <circle cx="11" cy="22" r="5.5" fill="#184d27" />
+    <circle cx="11" cy="22" r="2.5" fill="#d99b26" />
+    <circle cx="23" cy="23" r="4" fill="#184d27" />
+    <circle cx="23" cy="23" r="1.8" fill="#d99b26" />
+</svg>
+

@@ -41,7 +41,12 @@
                     </tr>
                     <c:forEach var="item" items="${linhas}">
                         <tr>
-                            <td><c:out value="${item.nomeProduto}" /></td>
+                            <td>
+                                <span class="nome-com-icone">
+                                    <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp" />
+                                    <span><c:out value="${item.nomeProduto}" /></span>
+                                </span>
+                            </td>
                             <td class="numero-celula">
                                 <fmt:formatNumber value="${item.quantidade}" maxFractionDigits="2" />
                                 <c:out value="${unidades[item.produtoId]}" />

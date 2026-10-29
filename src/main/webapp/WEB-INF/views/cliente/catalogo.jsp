@@ -41,24 +41,31 @@
         <div class="grelha">
             <c:forEach var="p" items="${produtos}">
                 <article class="cartao cartao-produto">
-                    <%-- Foto do produto ou bloco ilustrado com icone SVG e a categoria --%>
+                    <%-- Foto do produto ou bloco colorido com o icone SVG especifico da categoria --%>
                     <c:choose>
                         <c:when test="${not empty p.fotoUrl}">
                             <img class="produto-foto" src="<c:out value='${p.fotoUrl}' />" alt="<c:out value='${p.nome}' />">
                         </c:when>
                         <c:otherwise>
-                            <div class="produto-sem-foto">
-                                <svg class="icone-produto" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
-                                </svg>
+                            <div class="produto-sem-foto cat-painel-${not empty p.categoria ? p.categoria : 'GENERICO'}">
+                                <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp">
+                                    <jsp:param name="categoria" value="${p.categoria}" />
+                                    <jsp:param name="tamanho" value="grande" />
+                                </jsp:include>
                                 <span><c:out value="${p.nome}" /></span>
                             </div>
                         </c:otherwise>
                     </c:choose>
 
+                    <%-- Cabecalho do cartao com icone da categoria num bloco colorido, nome e selo da categoria --%>
                     <div class="produto-cabecalho">
-                        <h3><c:out value="${p.nome}" /></h3>
-                        <span class="etiqueta">${p.categoria}</span>
+                        <div class="produto-titulo-icone">
+                            <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp">
+                                <jsp:param name="categoria" value="${p.categoria}" />
+                            </jsp:include>
+                            <h3><c:out value="${p.nome}" /></h3>
+                        </div>
+                        <span class="etiqueta cat-selo-${not empty p.categoria ? p.categoria : 'GENERICO'}"><c:out value="${p.categoria}" /></span>
                     </div>
 
                     <p class="produto-meta">

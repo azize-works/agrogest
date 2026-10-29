@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" role="img" aria-label="Ferramenta">
+    <!-- Icone de Ferramenta: enxada/pa agricola com cabo dourado e lamina verde -->
+    <path d="M7 25 L21 11" stroke="#d99b26" stroke-width="3" stroke-linecap="round" />
+    <path d="M6 24 L8 26" stroke="#184d27" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M17 7 L25 15 L22 18 C19 16, 16 13, 14 10 Z" fill="#2b7a3d" stroke="#184d27" stroke-width="2" stroke-linejoin="round" />
+</svg>
+

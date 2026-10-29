@@ -18,8 +18,8 @@
         <%-- Documento da factura --%>
         <section class="cartao factura">
             <div class="factura-cabecalho">
-                <div>
-                    <h2>AgroGest</h2>
+                <div class="factura-marca">
+                    <img class="logo-img logo-cabecalho" src="${pageContext.request.contextPath}/assets/img/logo-agrogest.svg" width="168" height="44" alt="AgroGest">
                     <p class="subtitulo">Factura de venda</p>
                 </div>
                 <div class="factura-meta">
@@ -50,7 +50,12 @@
                     </tr>
                     <c:forEach var="item" items="${venda.itens}">
                         <tr>
-                            <td><c:out value="${item.nomeProduto}" /></td>
+                            <td>
+                                <span class="nome-com-icone">
+                                    <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp" />
+                                    <span><c:out value="${item.nomeProduto}" /></span>
+                                </span>
+                            </td>
                             <td class="numero-celula"><fmt:formatNumber value="${item.quantidade}" maxFractionDigits="2" /></td>
                             <td class="numero-celula"><fmt:formatNumber value="${item.precoUnit}" minFractionDigits="2" maxFractionDigits="2" /> MT</td>
                             <td class="numero-celula"><fmt:formatNumber value="${item.subtotal}" minFractionDigits="2" maxFractionDigits="2" /> MT</td>

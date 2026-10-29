@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AgroGest">
+    <!-- Escudo circular agricola com sol nascente, colinas verdes e espiga dourada -->
+    <defs>
+        <linearGradient id="agroFundo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#184d27" />
+            <stop offset="100%" stop-color="#2b7a3d" />
+        </linearGradient>
+    </defs>
+    <!-- Moldura exterior dourada e fundo verde profundo -->
+    <circle cx="32" cy="32" r="30" fill="url(#agroFundo)" stroke="#d99b26" stroke-width="3" />
+    <!-- Sol nascente dourado -->
+    <circle cx="32" cy="24" r="10" fill="#ffd54f" opacity="0.92" />
+    <!-- Colinas agricolas na base do escudo -->
+    <path d="M7 44 C18 36, 30 37, 44 45 C50 48, 54 48, 57 44 L54 53 C46 59, 38 61, 32 61 C24 61, 15 57, 9 50 Z" fill="#184d27" />
+    <path d="M9 48 C22 41, 38 41, 55 48 C50 56, 41 60, 32 60 C22 60, 14 55, 9 48 Z" fill="#388e3c" />
+    <!-- Caule e folhas verdes -->
+    <path d="M32 52 V18" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" />
+    <path d="M32 42 C23 41, 19 35, 21 28 C27 29, 31 34, 32 42 Z" fill="#e7f4ea" />
+    <path d="M32 42 C41 41, 45 35, 43 28 C37 29, 33 34, 32 42 Z" fill="#e7f4ea" />
+    <!-- Graos da espiga de trigo/milho em dourado -->
+    <ellipse cx="28" cy="24" rx="3.2" ry="5" transform="rotate(-28 28 24)" fill="#ffd54f" />
+    <ellipse cx="36" cy="24" rx="3.2" ry="5" transform="rotate(28 36 24)" fill="#ffd54f" />
+    <ellipse cx="28.5" cy="17.5" rx="2.8" ry="4.5" transform="rotate(-24 28.5 17.5)" fill="#d99b26" />
+    <ellipse cx="35.5" cy="17.5" rx="2.8" ry="4.5" transform="rotate(24 35.5 17.5)" fill="#d99b26" />
+    <ellipse cx="32" cy="13" rx="2.6" ry="4.2" fill="#ffd54f" />
+</svg>
+

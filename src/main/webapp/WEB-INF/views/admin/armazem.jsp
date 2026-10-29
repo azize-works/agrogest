@@ -36,8 +36,15 @@
                     </tr>
                     <c:forEach var="p" items="${produtos}">
                         <tr>
-                            <td><c:out value="${p.nome}" /></td>
-                            <td><span class="etiqueta">${p.categoria}</span></td>
+                            <td>
+                                <span class="nome-com-icone">
+                                    <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp">
+                                        <jsp:param name="categoria" value="${p.categoria}" />
+                                    </jsp:include>
+                                    <span><c:out value="${p.nome}" /></span>
+                                </span>
+                            </td>
+                            <td><span class="etiqueta cat-selo-${not empty p.categoria ? p.categoria : 'GENERICO'}"><c:out value="${p.categoria}" /></span></td>
                             <td><c:out value="${nomesFornecedores[p.fornecedorId]}" default="—" /></td>
                             <td class="numero-celula"><fmt:formatNumber value="${p.preco}" minFractionDigits="2" maxFractionDigits="2" /> MT</td>
                             <td class="numero-celula"><fmt:formatNumber value="${p.quantidade}" maxFractionDigits="2" /> <c:out value="${p.unidade}" /></td>

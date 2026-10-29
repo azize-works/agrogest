@@ -1,6 +1,7 @@
 <%-- erro403.jsp: pagina mostrada quando um utilizador tenta aceder a uma rota que nao lhe pertence. --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,10 +15,9 @@
 
     <main class="auth-pagina">
         <section class="cartao auth-cartao">
+            <%-- Logótipo versão pequena na página de erro 403 --%>
             <div class="auth-cabecalho">
-                <span class="auth-icone auth-icone-erro" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                </span>
+                <img class="logo-img logo-auth-pequeno" src="${pageContext.request.contextPath}/assets/img/logo-agrogest.svg" width="168" height="44" alt="AgroGest">
                 <h2>Acesso negado (403)</h2>
                 <p class="auth-sub">Não tem permissão para aceder a esta página.</p>
             </div>

@@ -111,11 +111,26 @@ textarea:focus-visible {
     font-weight: 800;
     color: var(--branco);
     letter-spacing: -0.02em;
+    max-width: 100%;
 }
 
 .topo .marca:hover {
     text-decoration: none;
     opacity: 0.95;
+}
+
+/* Logótipo SVG escalável sem cortar nem transbordar em ecrãs pequenos */
+.logo-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.logo-cabecalho {
+    width: 168px;
+    height: 44px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.16));
 }
 
 .icone-marca {
@@ -611,7 +626,7 @@ input:focus, select:focus, textarea:focus {
     text-align: center;
 }
 
-/* ---------- 8. Selos e etiquetas ---------- */
+/* ---------- 8. Selos, etiquetas e cores por categoria ---------- */
 .etiqueta {
     display: inline-block;
     padding: 3px 11px;
@@ -622,6 +637,111 @@ input:focus, select:focus, textarea:focus {
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.02em;
+}
+
+/* Selos coloridos por categoria de produto */
+.cat-selo-SEMENTE {
+    background: #e6f5ea;
+    color: #184d27;
+    border-color: #b4dfc0;
+}
+
+.cat-selo-FERTILIZANTE {
+    background: #fef5e0;
+    color: #7c5308;
+    border-color: #f0cf85;
+}
+
+.cat-selo-MAQUINARIA {
+    background: #e3f1f7;
+    color: #154c66;
+    border-color: #b0d4e3;
+}
+
+.cat-selo-FERRAMENTA {
+    background: #f5ebe6;
+    color: #573828;
+    border-color: #dbc1b4;
+}
+
+.cat-selo-GENERICO {
+    background: #eef2ef;
+    color: #324a3a;
+    border-color: #cdd8d0;
+}
+
+/* Blocos de ícone por categoria (pequeno nas tabelas e cabeçalho do cartão; grande no destaque do catálogo) */
+.bloco-icone-cat {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(24, 77, 39, 0.12);
+}
+
+.bloco-icone-pequeno {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.bloco-icone-grande {
+    width: 62px;
+    height: 62px;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(24, 77, 39, 0.08);
+}
+
+.icone-cat {
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.icone-cat-pequeno {
+    width: 20px;
+    height: 20px;
+}
+
+.icone-cat-grande {
+    width: 40px;
+    height: 40px;
+}
+
+/* Cores de fundo suaves por categoria nos blocos de ícone */
+.cat-semente {
+    background: #dff2e4;
+    border-color: #b4dfc0;
+}
+
+.cat-fertilizante {
+    background: #fdf0d2;
+    border-color: #f0cf85;
+}
+
+.cat-maquinaria {
+    background: #dceef6;
+    border-color: #b0d4e3;
+}
+
+.cat-ferramenta {
+    background: #f2e4dd;
+    border-color: #dbc1b4;
+}
+
+.cat-generico {
+    background: #e9efeb;
+    border-color: #cdd8d0;
+}
+
+/* Alinhamento do ícone pequeno ao lado do nome do produto nas tabelas */
+.nome-com-icone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .selo {
@@ -698,6 +818,37 @@ input:focus, select:focus, textarea:focus {
     border: 1px dashed #a5d1af;
 }
 
+/* Fundo suave do painel ilustrado no catálogo diferenciado por categoria */
+.cat-painel-SEMENTE {
+    background: linear-gradient(135deg, #ebf8ee 0%, #d4ebd9 100%);
+    border-color: #9ecfa9;
+    color: #184d27;
+}
+
+.cat-painel-FERTILIZANTE {
+    background: linear-gradient(135deg, #fff9eb 0%, #f9e6b8 100%);
+    border-color: #e3be68;
+    color: #6b4604;
+}
+
+.cat-painel-MAQUINARIA {
+    background: linear-gradient(135deg, #ebf5fa 0%, #cfe5f0 100%);
+    border-color: #96c2d6;
+    color: #124057;
+}
+
+.cat-painel-FERRAMENTA {
+    background: linear-gradient(135deg, #f9f1ed 0%, #ead6cc 100%);
+    border-color: #cfaea0;
+    color: #4f3122;
+}
+
+.cat-painel-GENERICO {
+    background: linear-gradient(135deg, #f1f5f2 0%, #dfe7e1 100%);
+    border-color: #b7c4bb;
+    color: #2b4032;
+}
+
 .icone-produto {
     display: inline-flex;
     align-items: center;
@@ -715,6 +866,13 @@ input:focus, select:focus, textarea:focus {
     justify-content: space-between;
     gap: 8px;
     margin-bottom: 8px;
+}
+
+.produto-titulo-icone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
 }
 
 .produto-cabecalho h3 {
@@ -944,6 +1102,19 @@ input:focus, select:focus, textarea:focus {
     margin: 0 auto;
 }
 
+.heroi-logo-bloco {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.logo-heroi {
+    width: 240px;
+    max-width: 85%;
+    height: auto;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.24));
+}
+
 .heroi-ilustracao {
     display: inline-flex;
     align-items: center;
@@ -1032,6 +1203,25 @@ input:focus, select:focus, textarea:focus {
 .auth-cabecalho {
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* Logótipo grande nos cartões de login/registo e pequeno no erro 403 */
+.logo-auth-grande {
+    width: 220px;
+    max-width: 85%;
+    height: auto;
+    margin: 0 auto 14px;
+}
+
+.logo-auth-pequeno {
+    width: 165px;
+    max-width: 75%;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+.factura-marca .logo-cabecalho {
+    margin-bottom: 6px;
 }
 
 .auth-icone {
@@ -1136,6 +1326,22 @@ input:focus, select:focus, textarea:focus {
     }
     .topo .marca {
         font-size: 1.2rem;
+    }
+    .logo-cabecalho {
+        width: 138px;
+        height: 36px;
+    }
+    .logo-heroi {
+        width: 190px;
+        height: auto;
+    }
+    .logo-auth-grande {
+        width: 185px;
+        height: auto;
+    }
+    .logo-auth-pequeno {
+        width: 145px;
+        height: auto;
     }
     .topo nav {
         width: 100%;

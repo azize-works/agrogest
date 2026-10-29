@@ -65,7 +65,12 @@
                         </tr>
                         <c:forEach var="item" items="${v.itens}">
                             <tr>
-                                <td><c:out value="${item.nomeProduto}" /></td>
+                                <td>
+                                    <span class="nome-com-icone">
+                                        <jsp:include page="/WEB-INF/views/comum/icone-categoria.jsp" />
+                                        <span><c:out value="${item.nomeProduto}" /></span>
+                                    </span>
+                                </td>
                                 <td class="numero-celula"><fmt:formatNumber value="${item.quantidade}" maxFractionDigits="2" /></td>
                                 <td class="numero-celula"><fmt:formatNumber value="${item.precoUnit}" minFractionDigits="2" maxFractionDigits="2" /> MT</td>
                                 <td class="numero-celula"><fmt:formatNumber value="${item.subtotal}" minFractionDigits="2" maxFractionDigits="2" /> MT</td>

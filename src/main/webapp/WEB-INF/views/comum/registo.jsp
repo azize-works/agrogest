@@ -1,6 +1,7 @@
 <%-- registo.jsp: formulario de auto-registo de clientes. Mantem os campos se houver erro. --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,10 +15,9 @@
 
     <main class="auth-pagina">
         <section class="cartao auth-cartao">
+            <%-- Logótipo grande no topo do cartão de registo --%>
             <div class="auth-cabecalho">
-                <span class="auth-icone" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-                </span>
+                <img class="logo-img logo-auth-grande" src="${pageContext.request.contextPath}/assets/img/logo-agrogest.svg" width="220" height="58" alt="AgroGest">
                 <h2>Criar conta</h2>
                 <p class="auth-sub">Registe-se para comprar no AgroGest.</p>
             </div>
